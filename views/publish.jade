@@ -1,0 +1,16 @@
+meta(charset="UTF-8")
+meta(name="viewport" content="width=device-width,initial-scale=1,user-scalable=0")
+link(rel='stylesheet', href='/stylesheets/weui.min.css')
+link(rel='stylesheet', href='/stylesheets/style.css')
+link(rel='stylesheet', href='/stylesheets/weui.css')
+link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+script(src="/javascripts/lib/vue.js")
+script(src="/javascripts/lib/jquery.min.js")
+script(src="/javascripts/lib/bootstrap.min.js")
+script(src="/javascripts/app/publish.js")
+div(id="publish")
+    textarea.weui_uploader_hd.weui_cell(style="width:100%; height:100px;" type="text" value="请输入文字")
+    .weui_uploader_input_wrp(id="p")
+        input.weui_uploader_input(type="file" accept="image/*")
+    button(v-on:click="pub") 发布
+script set('#{title}');

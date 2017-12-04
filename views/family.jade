@@ -1,0 +1,28 @@
+extends layout
+
+block content
+ link(rel='stylesheet', href='/stylesheets/weui.css')
+ h1.center_text 家庭农场
+ .weui_cells
+  .weui_uploader		
+    .weui_uploader_hd.weui_cell
+      .weui_uploader_bd
+        .weui_cell
+          div.weui_cell_bd.weui_cell_primary.center_text
+            a(href="field")
+              img(src='#{pic1}' style="text-align:center;height:200px;width:100%;") 
+    .weui_uploader_bd
+      .weui_cell
+        .weui_cell_bd.weui_cell_primary.center_text
+         p 菜地A
+        div.weui_cell_bd.weui_cell_primary.center_text
+         p 200/月
+      .weui_cell
+        div.weui_cell_bd.weui_cell_primary.center_text
+          img(src='#{pic2}' style="text-align:center;height:200px;width:100%;")
+    .weui_uploader_bd
+      .weui_cell
+        div.weui_cell_bd.weui_cell_primary.center_text
+          p 菜地B
+        div.weui_cell_bd.weui_cell_primary.center_text
+          p 200/月

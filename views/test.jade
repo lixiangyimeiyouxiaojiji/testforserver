@@ -1,0 +1,40 @@
+meta(charset="UTF-8")
+meta(name="viewport" content="width=device-width,initial-scale=1,user-scalable=0")
+link(rel='stylesheet', href='/stylesheets/jingdong.css')
+link(rel='stylesheet', href='/stylesheets/style.css')
+link(rel='stylesheet', href='/stylesheets/weui.css')
+link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+script(src="/javascripts/lib/jquery.min.js")
+script(src="/javascripts/app/more.js")
+h1.center_text first test
+div.wx_wrap(style="min-height: 100px; height: 571px;")
+    div(id="yScroll1" style="overflow: hidden; position: absolute; top: 45px; left: 0px; width: 80px; height: 571px; background-color: rgb(243, 243, 243);")
+        ul.category1(style="border-bottom-style: none; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 1200ms; transform: translate(0px, 0px) translateZ(0px);") 分类
+            li.cur(id="g1")
+                span.0 node
+            li.cur(id="g2")
+                span.0 vue
+    div.show(id="g1_s" style="overflow: hidden; position: absolute; top: 45px; left: 80px; height: 571px;")
+        div(style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);")
+            div(id="category2" style="padding-bottom:10px")
+                .weui_cells
+                    .weui_cell					
+                        .weui_cell_bd.weui_cell_primary.center_text
+                            img(src="http://placehold.it/1200x400?text=one" style="text-align:center;width:100%;")
+                        .weui_cell_bd.weui_cell_primary.center_text      
+                            p.tit 小佘没有小鸡鸡
+                    .weui_cell					
+                        .weui_cell_bd.weui_cell_primary.center_text
+                            img(src="http://placehold.it/1200x400?text=two" style="text-align:center;width:100%;")
+                        .weui_cell_bd.weui_cell_primary.center_text      
+                            p.tit iPones6s
+    div.hide(id="g2_s" style="overflow: hidden; position: absolute; top: 45px; left: 80px; height: 571px;")
+        div(style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);")
+            div(id="category3" style="padding-bottom:10px")
+               .weui_cells
+                    .weui_cell					
+                        .weui_cell_bd.weui_cell_primary.center_text
+                            img(src="http://placehold.it/1200x400?text=three" style="text-align:center;width:100%;")
+                        .weui_cell_bd.weui_cell_primary.center_text      
+                            p.tit 虚祥没有小鸡鸡
+   script setgrol()

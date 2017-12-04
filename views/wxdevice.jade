@@ -1,0 +1,72 @@
+extends layout
+
+block content
+	.weui_search_bar
+		form.weui_search_outer
+			.weui_search_inner
+				i.weui_icon_search
+				input#search_input.weui_search_input(type="search")
+				a.weui_icon_clear(href="javascript:")
+			label.weui_search_text(for="search_input")
+				i.weui_icon_search
+				span 搜索
+		a.weui_search_cancel(href="javascript:") 取消
+	.weui_cells
+		.weui_cell
+			.weui_cell_bd
+				p 设备编码 #{barcode}
+			.weui_cell_bd.weui_cell_primary
+				div.weui_uploader_file(style="background-image:url(http://pic.baike.soso.com/p/20130410/20130410093930-482156936.jpg)")		
+	.weui_cells
+		.weui_cell
+			.weui_cell_bd.weui_cell_primary
+				p 设备名称 #{barcode}	
+		.weui_cell
+			.weui_cell_bd.weui_cell_primary
+				p 设备型号 #{barcode}
+		.weui_cell
+			.weui_cell_bd.weui_cell_primary
+				p 安装日期 #{barcode}
+		.weui_cell
+			.weui_cell_bd.weui_cell_primary
+				p 设备地址 #{barocde}
+	.weui_navbar.sw_navbar
+					.weui_navbar_item.weui_bar_item_on 巡检记录
+					.weui_navbar_item 维修记录
+					.weui_navbar_item 清扫记录
+					.weui_navbar_item 检测记录
+	.weui_cells
+		.weui_cell			
+			.weui_cell_bd.weui_cell_primary			
+			.weui_cell_bd.weui_cell_primary
+				p 2016年一季度巡检记录
+				p 2016-03-02 9:00
+			.weui_cell_bd.weui_cell_primary
+				p 巡检员  ：郭永洲
+				p 设备状态：正常
+		.weui_cell
+			.weui_cell_bd.weui_cell_primary		
+			.weui_cell_bd.weui_cell_primary
+				p 2016年二季度巡检记录
+				p 2016-06-02 9:00
+			.weui_cell_bd.weui_cell_primary
+				p 巡检员  ：郭永洲
+				p 设备状态：正常
+		.weui_cell
+			.weui_cell_bd.weui_cell_primary
+				li.weui_uploader_file(style="background-image:url(http://pic.baike.soso.com/p/20130410/20130410093930-482156936.jpg)")		
+			.weui_cell_bd.weui_cell_primary
+				p 2016年三季度巡检记录
+				p 2016-09-02 9:00
+			.weui_cell_bd.weui_cell_primary
+				p 巡检员  ：郭永洲
+				p 设备状态：正常
+		.weui_cell
+			.weui_cell_bd.weui_cell_primary
+				li.weui_uploader_file(style="background-image:url(http://pic.baike.soso.com/p/20130410/20130410093930-482156936.jpg)")		
+			.weui_cell_bd.weui_cell_primary
+				p 2016年四季度巡检记录
+				p 2016-12-02 9:00
+			.weui_cell_bd.weui_cell_primary
+				p 巡检员  ：郭永洲
+				p 设备状态：正常

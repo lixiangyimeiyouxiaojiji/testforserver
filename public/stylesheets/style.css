@@ -1,0 +1,29 @@
+.sw_navbar {
+	position:inherit;
+}
+.right_text{
+        text-align:right;
+}
+.center_text{
+        text-align:center;
+}
+.bottom_bar{
+        top:inherit;
+}
+.pic{
+        text-align:center;
+        height:200px;
+        width:100%;
+}
+.pic_60{
+        height:60px;
+}
+ab_pic{
+        position: absolute;
+        text-align:center;
+        width:100%;
+}
+nor_pic{
+        text-align:center;
+        width:100%;
+}

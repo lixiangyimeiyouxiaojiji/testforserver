@@ -1,0 +1,165 @@
+﻿meta(charset="UTF-8")
+meta(name="viewport" content="width=device-width,initial-scale=1,user-scalable=0")
+link(rel='stylesheet', href='/stylesheets/weui.min.css')
+link(rel='stylesheet', href='/stylesheets/style.css')
+link(rel='stylesheet', href='/stylesheets/weui.css')
+link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+script(src="/javascripts/lib/vue.js")
+script(src="/javascripts/lib/jquery.min.js")
+script(src="/javascripts/lib/bootstrap.min.js")
+script(src="/javascripts/lib/DD_roundies_min.js.js")
+script(src="/javascripts/lib/require.js")
+script(src="/javascripts/app/reqconfig.js")
+script(src="/javascripts/app/sha1.js")
+block content
+div.show(id="show1")
+	.weui_cells(id="app")
+		.weui_cell					
+			div.weui_cell_bd.weui_cell_primary
+				p(v-on:click="loc")  位置
+			div.weui_cell_bd.weui_cell_primary.center_text
+				div.btn-group(data-toggle="buttons")
+					label.btn.btn-primary.active(v-on:click="act('activity')") 活动
+						input(type="radio" name="options" id="option1") 
+					label.btn.btn-primary(v-on:click="zhuang('zhuang')") 庄园
+						input(type="radio" name="options" id="option2") 
+			.weui_cell_bd.weui_cell_primary.right_text
+				a(href="/message")  消息
+	div(id="activity")
+		div.carousel.slide(id="myCarousel")
+			ol.carousel-indicators
+				li.active(data-target="#myCarousel" data-slide-to="0")
+				li(data-target="#myCarousel" data-slide-to="1")
+				li(data-target="#myCarousel" data-slide-to="2")
+			div.carousel-inner.pic
+				div.item.active
+					img.pic(src='#{pic1}' alt="First slide")
+				div.item
+					img.pic(src='#{pic2}' alt="Second slide")
+				div.item
+					img.pic(src='#{pic3}'  alt="Third slide")
+		.weui_cells
+			.weui_cell					
+				div(id="nong").weui_cell_bd.weui_cell_primary.center_text
+					a(href="/getcode") 家庭农场
+				div(id="cai").weui_cell_bd.weui_cell_primary.center_text
+					a(href="/pick") 观赏采摘
+				div(id="zhen").weui_cell_bd.weui_cell_primary.center_text
+					a(href="/ingredients") 臻品食材
+				div(id="more").weui_cell_bd.weui_cell_primary.center_text
+					a(href="/more") 更多特色
+		.weui_cells
+			.weui_cell
+				div.weui_cell_bd.weui_cell_primary.center_text
+					img.pic(src="http://placehold.it/1200x400?text=one" )
+	div.hide(id="zhuang")
+		img.pic(src="http://placehold.it/1200x400?text=one")
+		div 视频播放
+		div 一键耕作
+div.hide(id="show2")
+	.weui_cells.weui_cells_form
+				.weui_cell
+						
+					div.weui_cell_bd.weui_cell_primary
+						p(v-on:click="loc")  位置
+					div.weui_cell_bd.weui_cell_primary.center_text
+						h1.center_text 发现
+					.weui_cell_bd.weui_cell_primary.right_text
+						a(href="/publish")  发布
+				.weui_cell
+				.weui_uploader		
+					.weui_uploader_hd.weui_cell
+						.weui_uploader_bd
+							.weui_cell					
+								div.weui_cell_bd.weui_cell_primary
+									img.pic.pic_60(src="http://placehold.it/1200x400?text=one")
+								div.weui_cell_bd.weui_cell_primary
+									p 嗷大喵
+									p 5分钟前
+								div.weui_cell_bd.weui_cell_primary
+								div.weui_cell_bd.weui_cell_primary
+				.weui_uploader_bd
+						p WeUI是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信 Web 开发量身设计，可以令用户的使用感知更加统一。包含button、cell、dialog、 progress, toast、article、icon等各式元素。
+				.weui_uploader_bd
+					.weui_uploader_files
+						.weui_uploader_file
+							img.pic(src="http://placehold.it/1200x400?text=one" )
+						.weui_uploader_file
+							img.pic(src="http://placehold.it/1200x400?text=one")
+						.weui_uploader_file
+							img.pic(src="http://placehold.it/1200x400?text=one" )
+				.weui_uploader_bd
+					.weui_cell
+						div.weui_cell_bd.weui_cell_primary
+							p 北京大学
+						div.weui_cell_bd.weui_cell_primary.right_text
+							p 点赞
+						div.weui_cell_bd.weui_cell_primary.right_text
+							p 评论
+						div.weui_cell_bd.weui_cell_primary.right_text
+							p 转发
+				.weui_cell
+				.weui_uploader		
+					.weui_uploader_hd.weui_cell
+						.weui_uploader_bd
+							.weui_cell					
+								div.weui_cell_bd.weui_cell_primary
+									img.pic.pic_60(src="http://placehold.it/1200x400?text=one")
+								div.weui_cell_bd.weui_cell_primary
+									p 老李头
+									p 10分钟前
+								div.weui_cell_bd.weui_cell_primary
+								div.weui_cell_bd.weui_cell_primary
+				.weui_uploader_bd
+						p 按钮可以使用a或者button标签。wap上要触发按钮的active态，必须触发ontouchstart事件，可以在body上加上ontouchstart=""全局触发。
+				.weui_uploader_bd
+					.weui_uploader_files
+						.weui_uploader_file
+							img.pic.pic_60(src="http://placehold.it/1200x400?text=one" )
+						.weui_uploader_file
+							img.pic.pic_60(src="http://placehold.it/1200x400?text=one" )
+						.weui_uploader_file
+							img.pic.pic_60(src="http://placehold.it/1200x400?text=one")
+						.weui_uploader_file
+							img.pic.pic_60(src="http://placehold.it/1200x400?text=one")
+				.weui_uploader_bd
+					.weui_cell
+						div.weui_cell_bd.weui_cell_primary
+							p 清华大学
+						div.weui_cell_bd.weui_cell_primary.right_text
+							p 点赞
+						div.weui_cell_bd.weui_cell_primary.right_text
+							p 评论
+						div.weui_cell_bd.weui_cell_primary.right_text
+							p 转发
+div.hide(id="show3")
+	div(style="position: relative;") #{nickname}
+		img.websjy3.thumb(src="#{headimgurl}" style="position: absolute;border:1px solid #666666; width:85px; height:85px;top: 30%; left: 40%; margin-bottom:10px; font-size:12px;")
+		img.pic(src="http://placehold.it/1200x400?text=one")
+	.weui_cells
+			.weui_cell					
+				div.weui_cell_bd.weui_cell_primary.center_text
+					p 100
+					p 动态					
+				div.weui_cell_bd.weui_cell_primary.center_text
+					p 100
+					p 关注				
+				div.weui_cell_bd.weui_cell_primary.center_text
+					p 100
+					p 粉丝
+			.weui_cell(id="myding")
+				div.weui_cell_bd.weui_cell_primary.center_text(style="text-align:center;width:50px;")
+					img()
+				div.weui_cell_bd.weui_cell_primary.center_text
+					p 我的订单
+				div.weui_cell_bd.weui_cell_primary
+				div.weui_cell_bd.weui_cell_primary
+.weui_tab
+			div.weui_tabbar.navbar-fixed-bottom
+				a.weui_tabbar_item(id="1")
+					.weui_bar_item_on.weui_tabbar_label 活动
+				a.weui_tabbar_item(id="2")
+					.weui_tabbar_label 发现
+				a.weui_tabbar_item(id="3")
+					.weui_tabbar_label 我的	 	
+script setname('#{ticket}');

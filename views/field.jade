@@ -1,0 +1,60 @@
+meta(charset="UTF-8")
+meta(name="viewport" content="width=device-width,initial-scale=1,user-scalable=0")
+link(rel='stylesheet', href='/stylesheets/weui.min.css')
+link(rel='stylesheet', href='/stylesheets/style.css')
+link(rel='stylesheet', href='/stylesheets/weui.css')
+link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+script(src="/javascripts/lib/vue.js")
+script(src="/javascripts/lib/jquery.min.js")
+script(src="/javascripts/lib/bootstrap.min.js")
+script(src="/javascripts/app/field.js")
+block content
+    div.carousel.slide(id="myCarousel2")
+        ol.carousel-indicators
+            li.active(data-target="#myCarousel2" data-slide-to="0")
+            li(data-target="#myCarousel2" data-slide-to="1")
+            li(data-target="#myCarousel2" data-slide-to="2")
+        div.carousel-inner.pic
+            div.item.active
+                 img.pic(src='#{pic1}' alt="First slide")
+            div.item
+                 img.pic(src='#{pic2}' alt="Second slide")
+            div.item
+                 img.pic(src='#{pic3}' alt="Third slide")
+    .weui_cells
+        .weui_cell					
+            div(id="now").weui_cell_bd.weui_cell_primary.center_text
+                p 现价
+            div(id="last").weui_cell_bd.weui_cell_primary
+                p 原价
+            div(id="zhuang").weui_cell_bd.weui_cell_primary.right_text
+                p 状态
+         .weui_cell
+            div.weui_cell_bd.weui_cell_primary.center_text
+                p 购买人数
+            div.weui_cell_bd.weui_cell_primary.right_text
+                p 截止日期 2016年
+         .weui_cell
+            div.weui_cell_bd.weui_cell_primary
+                p 地址
+            div.weui_cell_bd.weui_cell_primary.right_text
+                p 拨电话
+         .weui_cell
+                p 地址
+         .weui_cell
+                img(src="data:image/jpg;base64,#{pic}")
+         .weui_cell
+                p 。。。。。。。。。。。。。。。。。。。
+         .weui_cell
+                img()
+         .weui_cell
+                p 打分
+         .weui_cell
+                p 购买包含
+         .weui_cell
+                p 2222
+         .weui_cell
+                p 使用规则
+         .weui_cell
+                p 66666666666666
+script field("hhh")

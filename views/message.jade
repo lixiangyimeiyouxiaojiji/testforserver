@@ -1,0 +1,24 @@
+meta(charset="UTF-8")
+meta(name="viewport" content="width=device-width,initial-scale=1,user-scalable=0")
+link(rel='stylesheet', href='/stylesheets/weui.min.css')
+link(rel='stylesheet', href='/stylesheets/style.css')
+link(rel='stylesheet', href='/stylesheets/weui.css')
+link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+script(src="/javascripts/lib/vue.js")
+script(src="/javascripts/app/message.js")
+script(src="/javascripts/lib/jquery.min.js")
+script(src="/javascripts/lib/bootstrap.min.js")
+block content
+.weui_cells(id="m")
+    .weui_cell					
+    div.weui_cell_bd.weui_cell_primary.center_text
+        div.btn-group(data-toggle="buttons")
+            label.btn.btn-primary.active(v-on:click="user('user')") 用户
+                input(type="radio" name="options")
+            label.btn.btn-primary(v-on:click="system('system')") 系统
+                input(type="radio" name="options")
+div(id="user")
+    p 用户
+div.hide(id="system")
+    p 系统
+script getmes()
