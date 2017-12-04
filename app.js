@@ -22,6 +22,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //`soway.getoken();
 app.use('/', routes);
-http.createServer(app).listen(8080,function(){
+http.createServer(app).listen(3010,function(){
 	console.log('soway wechat server start .');
 });
